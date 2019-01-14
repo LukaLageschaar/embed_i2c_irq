@@ -57,6 +57,7 @@ void i2c_get_change(I2C* i2c_mem){
     /*debug code*/
     BYTE *byte;
     byte = &last_byte;
+    byte->b = 0;
     int bus = -1;
     while(!(mpr_c->bsc0_1) & !(mpr_c->bsc0_2) & !(mpr_c->bsc0_3) & !(mpr_c->bsc0_4) & !(mpr_c->bsc1_1) & !(mpr_c->bsc1_2) & !(mpr_c->bsc1_3) & !(mpr_c->bsc1_4)); //wait for change
     int reg0 = 0x00;
